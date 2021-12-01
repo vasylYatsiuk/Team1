@@ -1,12 +1,14 @@
 ﻿#include <stdio.h>
 #include <math.h>
-#include <stdlib.h>
 int main()
-{
-    int dim,arr[dim],count,parne_2,parne_2_pos;
-    float arr_mod[dim];
+{ 
+    int dim,count,parne_2,parne_2_pos;
     scanf("%d",&dim);
-    for(int i=0;i<dim;i++) scanf("%d",&arr[i]);
+    int arr[dim];
+    float arr_mod[dim];
+    for(int i=0;i<dim;i++){
+        scanf("%d",&arr[i]);
+    }
     for(int i=0;i<dim;i++)
     { 
         if(arr[i]%2 == 0)
