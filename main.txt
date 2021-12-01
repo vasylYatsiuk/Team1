@@ -1,11 +1,16 @@
 #include <stdio.h>
 #include <math.h>
 #include <stdlib.h>
+#include <time.h>
 int main()
 {
+    srand ( time(NULL) );
     int dim,arr[12],count,parne_2,parne_2_pos;
     float arr_mod[12];
-    for(int i=0;i<12;i++)  
+    scanf("%d",&dim);
+    for(int i=0;i<dim;i++)
+       arr[i]=rand()%99;
+    for(int i=0;i<dim;i++)
     { 
         if(arr[i]%2 == 0)
         {   count++;
