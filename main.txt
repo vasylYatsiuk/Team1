@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <math.h>
+#include <stdlib.h>
+int main()
+{
+    int dim,arr[12],count,parne_2,parne_2_pos;
+    float arr_mod[12];
+    for(int i=0;i<12;i++)  
+    { 
+        if(arr[i]%2 == 0)
+        {   count++;
+            if(count==2)
+                parne_2=arr[i];
+                parne_2_pos=i;
+        }
+     if(count==2) break;
+    }
+    for(int i=0;i<12;i++)
+    {   arr_mod[i]=arr[i];
+        if(i>parne_2_pos) arr_mod[i]=arr_mod[i]/parne_2;
+    }
+    if(count==0)
+        printf("В масиві немає парних елементів\n");
+    if (count==1)
+        printf("В масиві тільки один парий елемент\n");
+    return 0;
+}
