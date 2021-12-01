@@ -3,9 +3,10 @@
 #include <stdlib.h>
 int main()
 {
-    int dim,arr[12],count,parne_2,parne_2_pos;
-    float arr_mod[12];
-    for(int i=0;i<12;i++)  
+    int dim,count,parne_2,parne_2_pos;
+    int arr[dim];
+    float arr_mod[dim];
+    for(int i=0;i<dim;i++)
     { 
         if(arr[i]%2 == 0)
         {   count++;
@@ -15,7 +16,7 @@ int main()
         }
      if(count==2) break;
     }
-    for(int i=0;i<12;i++)
+    for(int i=0;i<dim;i++)
     {   arr_mod[i]=arr[i];
         if(i>parne_2_pos) arr_mod[i]=arr_mod[i]/parne_2;
     }
